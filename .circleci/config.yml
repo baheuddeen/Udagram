@@ -64,7 +64,7 @@ jobs:
           command: |
             echo "Install, build, deploy in both apps"
             npm run frontend:deploy
-            npm run frontend:api
+            npm run frontend:deploy
 
             
 workflows:
@@ -79,4 +79,6 @@ workflows:
           type: approval
           requires:
             - build
-            - deploy
+      - deploy:
+          requires:
+            - hold
