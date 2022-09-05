@@ -64,7 +64,7 @@ jobs:
           command: |
             echo "Install, build, deploy in both apps"
             npm run frontend:deploy
-            npm run frontend:deploy
+            npm run api:deploy
 
             
 workflows:
